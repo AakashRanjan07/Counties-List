@@ -15,7 +15,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
   
   .then(([country]) => {
-    // console.log(country);
+    console.log(country); //to get the details of the api after destructuring.
     flagImage.src = country.flags.svg;
     countryNameH1.innerText = country.name.common;
     population.innerText = country.population.toLocaleString("en-IN");
